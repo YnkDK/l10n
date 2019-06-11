@@ -55,8 +55,8 @@ Please read [CONTRIBUTING.md](./CONTRIBUTING.md) for details on our code of cond
 
 
 ## Authors
-- (YnkDK)[https://github.com/YnkDK]
-- (odinstown76)[https://github.com/odinstown76]
+- [YnkDK](https://github.com/YnkDK)
+- [odinstown76](https://github.com/odinstown76)
 
 ## License
 
