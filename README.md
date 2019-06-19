@@ -48,7 +48,26 @@ TODO: Descibe how to get support
 
 ## Roadmap
 
-TODO: Write the roadmap
+Initial proof-of-concept contains:
+- Project/Namespaces/Directories/Collections of:
+  - Key-Value pairs
+- Export to `resx` file, e.g. `Project_Name.language.resx`
+
+Next version contains:
+- Inheritance of projects
+- Revision of the Key-Value paris
+
+Next version contains:
+- Handle placeholders in localization value
+- Export to `json` following a standard used in a Single Page Application (SPA)
+
+Next version contains:
+- Feature to support review of proposed changes in localization
+- Push of changes (Webhook, Git or something else)
+
+Next version contains:
+- Integration with popular translation services. It could be translated.com or someone similar
+
 
 ## Contributing
 Please read [CONTRIBUTING.md](./CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
