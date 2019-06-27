@@ -11,7 +11,9 @@
 > -- <cite>Wikipedia contributors. (2019, March 9). Internationalization and localization. In Wikipedia, The Free Encyclopedia. Retrieved 18:46, June 11, 2019, from [Wikipedia](https://en.wikipedia.org/w/index.php?title=Internationalization_and_localization&oldid=886896357)</cite>
 
 
-TODO: Insert badges (CircleCI, SonarCloud etc)
+[![Build Status](https://dev.azure.com/GeneralPublicApplications/l10n/_apis/build/status/YnkDK.l10n?branchName=master)](https://dev.azure.com/GeneralPublicApplications/l10n/_build/latest?definitionId=1&branchName=master) [![License](https://img.shields.io/badge/license-GPLv3-blue.svg)](LICENSE)
+
+TODO: Insert badges from SonarCloud
 
 ## Motivation
 
