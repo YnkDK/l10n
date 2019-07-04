@@ -8,6 +8,7 @@ namespace DataAccess.Models
         /// <summary>
         /// The date and time for when the user was first created
         /// </summary>
+        [Required]
         public DateTime Created { get; set; }
 
         /// <summary>
@@ -15,6 +16,7 @@ namespace DataAccess.Models
         /// The property is also treated as a concurrency token. This ensures that an exception is thrown if anyone else has modified this row since the row was queried.
         /// </summary>
         [Timestamp]
+        [Required]
         public byte[] Updated { get; set; }
     }
 }

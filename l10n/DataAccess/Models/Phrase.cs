@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace DataAccess.Models
 {
@@ -13,6 +14,16 @@ namespace DataAccess.Models
         /// Any group of words, or sometimes a single word, which plays a particular
         /// role within the grammatical structure of a sentence.
         /// </summary>
+        [MaxLength(2047)]
+        [Required]
         public string Key { get; set; }
+
+        /// <summary>
+        /// The SHA256 of the Key attribute
+        /// </summary>
+        /// 
+        [MaxLength(32)]
+        [Required]
+        public byte[] KeyHash { get; set; }
     }
 }

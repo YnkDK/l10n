@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DataAccess.Models
 {
@@ -8,6 +9,7 @@ namespace DataAccess.Models
         /// The related organization.
         /// </summary>
         [ForeignKey("OrganizationId")]
+        [Required]
         public Organization Organization { get; set; }
     }
 }
