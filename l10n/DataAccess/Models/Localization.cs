@@ -14,7 +14,6 @@ namespace DataAccess.Models
         /// <summary>
         /// The appropriate translation for the given locale.
         /// </summary>
-        /// 
         [MaxLength(2047)]
         [Required]
         public string Value { get; set; }
