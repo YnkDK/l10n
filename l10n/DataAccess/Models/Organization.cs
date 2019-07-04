@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace DataAccess.Models
 {
-    public class Organization : BaseModel
+    public class Organization : MetaDataEntity
     {
         /// <summary>
         /// Primary key

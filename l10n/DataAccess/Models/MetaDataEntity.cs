@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Text;
 
 namespace DataAccess.Models
 {
-    public class BaseModel
+    public class MetaDataEntity
     {
         /// <summary>
         /// The date and time for when the user was first created

@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Text;
 
 namespace DataAccess.Models
 {
-    public class User : BaseModel
+    public class User : OrganizationBoundEntity
     {
         /// <summary>
         /// Primary key
@@ -43,8 +40,5 @@ namespace DataAccess.Models
         /// </summary>
         [MaxLength(2047)]
         public string Picture { get; set; }
-
-        [ForeignKey("OrganizationId")]
-        public Organization Organization { get; set; }
     }
 }
