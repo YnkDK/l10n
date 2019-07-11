@@ -17,12 +17,5 @@ namespace DataAccess.Models
         [MaxLength(2047)]
         [Required]
         public string Key { get; set; }
-
-        /// <summary>
-        /// The SHA256 of the Key attribute
-        /// </summary>
-        [MaxLength(32)]
-        [Required]
-        public byte[] KeyHash { get; set; }
     }
 }
