@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DataAccess.Models
 {
-    public class Localization : OrganizationBoundEntity
+    public class Localization : MetaDataEntity
     {
         /// <summary>
         /// Primary key.
