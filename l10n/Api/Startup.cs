@@ -1,17 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Api.Features.ApplicationHealth;
 using DataAccess.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 
 namespace Api
 {
@@ -28,6 +22,9 @@ namespace Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            services.AddHealthChecks()
+                .AddDbContextCheck<L10nContext>();
 
             services.AddDbContextPool<L10nContext>(options => options.UseSqlServer(Configuration.GetConnectionString("L10n")));
         }
@@ -47,6 +44,10 @@ namespace Api
 
             app.UseHttpsRedirection();
             app.UseMvc();
+
+            // TODO: Could use MapWhen as described in documentation to limit access on IP or similar
+            // ref: https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/health-checks?view=aspnetcore-2.2#restrict-health-checks-with-mapwhen-1
+            app.UseHealthChecks("/application-health", HealthCheckOptionsFactory.Create());
         }
     }
 }
